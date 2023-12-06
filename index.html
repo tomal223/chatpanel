@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <title>Sass Chat Panel</title>
+
+</head>
+
+<body class="overflow-hidden">
+
+    <!--------- Header area start --------->
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="header-left d-flex align-items-center">
+                <div class="sidebar-open d-block d-xl-none">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 8.25027 2 6.3754 2.95491 5.06107C3.26331 4.6366 3.6366 4.26331 4.06107 3.95491C5.3754 3 7.25027 3 11 3H13C16.7497 3 18.6246 3 19.9389 3.95491C20.3634 4.26331 20.7367 4.6366 21.0451 5.06107C22 6.3754 22 8.25027 22 12C22 15.7497 22 17.6246 21.0451 18.9389C20.7367 19.3634 20.3634 19.7367 19.9389 20.0451C18.6246 21 16.7497 21 13 21H11C7.25027 21 5.3754 21 4.06107 20.0451C3.6366 19.7367 3.26331 19.3634 2.95491 18.9389C2 17.6246 2 15.7497 2 12Z"
+                            stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M9.5 3.5L9.5 20.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M5 7C5 7 5.91421 7 6.5 7" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M5 11H6.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M17 10L15.7735 11.0572C15.2578 11.5016 15 11.7239 15 12C15 12.2761 15.2578 12.4984 15.7735 12.9428L17 14"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="header-dropdown dropdown">
+                    <button class="dropdown-toggle bg-transparent border-0 p-0 d-flex align-items-center" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="flex-shrink-0"><img src="assets/img/icons/clipboard-icon.svg" alt="Icon"></span>
+                        Solar
+                        Power Revolution <img class="chevron-down" src="assets/img/icons/chevron-down.svg" alt="Icon">
+                    </button>
+                    <ul class="dropdown-menu mt-2 dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#"> Power Revolution</a></li>
+                        <li><a class="dropdown-item" href="#">Solar Revolution</a></li>
+                        <li><a class="dropdown-item" href="#">Solar Power </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right d-flex align-items-center">
+                <div class="header-notification dropdown">
+                    <button class="dropdown-toggle bg-transparent border-0 p-0 d-flex align-items-center" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/img/icons/notification-icon.svg" alt="Img">
+                    </button>
+                    <ul class="dropdown-menu mt-2 dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#"> Dropdown Item</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown Item</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown Item </a></li>
+                    </ul>
+                </div>
+                <div class="separator"><img src="assets/img/icons/separator.svg" alt="Icon"></div>
+                <div class="header-profile dropdown">
+                    <button
+                        class="dropdown-toggle d-flex align-items-center bg-transparent border-0 p-0 d-flex align-items-center"
+                        type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <h6 class="mb-0 d-none d-md-block"><b>Mr Admin</b> <span>Electric Motor Repairer</span></h6>
+                        <img class="cover-img" src="assets/img/thumbs/user-img.png" alt="Img">
+                    </button>
+                    <ul class="dropdown-menu mt-2 dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#"> My Account</a></li>
+                        <li><a class="dropdown-item" href="#">Billings</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--------- Header area end --------->
+
+    <!--------- Sidebar area start --------->
+    <aside class="sidebar position-fixed d-flex flex-column justify-content-between">
+        <nav class="sidebar-nav">
+            <ul class="m-0 p-0 list-unstyled">
+                <li><a href=""><span class="flex-shrink-0"><img src="assets/img/icons/sidebar-icons/sidebar-icon-1.svg"
+                                alt=""></span> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#submenu1" aria-expanded="false">
+                        <span class="flex-shrink-0"><img src="assets/img/icons/sidebar-icons/sidebar-icon-2.svg"
+                                alt=""></span> Projects <img class="chevron-icon"
+                            src="assets/img/icons/chevron-down.svg" alt="Icon">
+                    </a>
+                    <ul class="collapse" id="submenu1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#submenu2" aria-expanded="false">
+                        <span class="flex-shrink-0"><img src="assets/img/icons/sidebar-icons/sidebar-icon-3.svg"
+                                alt=""></span> Todo List <img class="chevron-icon"
+                            src="assets/img/icons/chevron-down.svg" alt="Icon">
+                    </a>
+                    <ul class="collapse" id="submenu2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#submenu3" aria-expanded="false">
+                        <span class="flex-shrink-0"><img src="assets/img/icons/sidebar-icons/sidebar-icon-4.svg"
+                                alt=""></span> Support Tickets <img class="chevron-icon"
+                            src="assets/img/icons/chevron-down.svg" alt="Icon">
+                    </a>
+                    <ul class="collapse" id="submenu3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="" class="active"><span class="flex-shrink-0"><img
+                                src="assets/img/icons/sidebar-icons/sidebar-icon-5.svg" alt=""></span> Chat</a></li>
+                <li><a href=""><span class="flex-shrink-0"><img src="assets/img/icons/sidebar-icons/sidebar-icon-6.svg"
+                                alt=""></span>
+                        Appointments</a></li>
+                <li><a href=""><span class="flex-shrink-0"><img src="assets/img/icons/sidebar-icons/sidebar-icon-7.svg"
+                                alt=""></span> Meet
+                        Generator</a></li>
+                <li>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#submenu4" aria-expanded="false">
+                        <span class="flex-shrink-0"><img src="assets/img/icons/sidebar-icons/sidebar-icon-8.svg"
+                                alt=""></span> Users <img class="chevron-icon" src="assets/img/icons/chevron-down.svg"
+                            alt="Icon">
+                    </a>
+                    <ul class="collapse" id="submenu4">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#submenu5" aria-expanded="false">
+                        <span class="flex-shrink-0"><img src="assets/img/icons/sidebar-icons/sidebar-icon-9.svg"
+                                alt=""></span> Settings <img class="chevron-icon"
+                            src="assets/img/icons/chevron-down.svg" alt="Icon">
+                    </a>
+                    <ul class="collapse" id="submenu5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Submenu Item 3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer pt-3">
+            <div class="sidebar-footer-link d-flex align-items-center">
+                <span><img src="assets/img/icons/sidebar-icons/sidebar-icon-10.svg" alt="Icon"></span> Dark Mode
+                <label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button class="arrow-button">
+                <img src="assets/img/icons/arrow-left-icon.svg" alt="Arrow Left">
+            </button>
+        </div>
+    </aside>
+    <div class="sidebar-overlay"></div>
+    <!--------- Sidebar area end --------->
+
+    <!--------- Main area start --------->
+    <main class="main">
+
+        <!--------- Chat Area start --------->
+        <section class="chat-area">
+            <div class="chat-panel d-flex">
+                <div class="chat-panel-left show flex-shrink-0">
+                    <div class="chat-panel-left-header">
+                        <h4>Chat</h4>
+                    </div>
+                    <div class="chat-panel-users">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    aria-selected="true">All Chat</button>
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">Group Chat</button>
+                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                    aria-selected="false">Contacts</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                aria-labelledby="nav-home-tab">
+                                <div class="chat-panel-users-list">
+                                    <div class="chat-panel-user-item new-message d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img src="assets/img/thumbs/user-img-1.png"
+                                                class="chat-panel-user-item-thumb-img" alt="ER">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ethan Rodriguez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start chat-active">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start chat-active">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start chat-active">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <div class="chat-panel-users-list">
+                                    <div class="chat-panel-user-item new-message d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img src="assets/img/thumbs/user-img-1.png"
+                                                class="chat-panel-user-item-thumb-img" alt="ER">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ethan Rodriguez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start chat-active">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start chat-active">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                aria-labelledby="nav-contact-tab">
+                                <div class="chat-panel-users-list">
+                                    <div class="chat-panel-user-item new-message d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img src="assets/img/thumbs/user-img-1.png"
+                                                class="chat-panel-user-item-thumb-img" alt="ER">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ethan Rodriguez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start ">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start chat-active">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-2.png" alt="OW">
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Olivia Williams</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start chat-active">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-3.png" alt="OW">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Liam Martinez</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <div class="chat-panel-user-item-thumb-img">AD</div>
+                                            <span
+                                                class="user-status inactive position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Ava Davis</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-panel-user-item d-flex align-items-start">
+                                        <div class="chat-panel-user-item-thumb position-relative flex-shrink-0">
+                                            <img class="chat-panel-user-item-thumb-img"
+                                                src="assets/img/thumbs/user-img-5.png" alt="NJ">
+                                            <span
+                                                class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                                        </div>
+                                        <div class="chat-panel-user-item-content d-flex w-100 justify-content-between">
+                                            <div class="chat-panel-user-item-content-left">
+                                                <h5>Noah Johnson</h5>
+                                                <p>Messenger in which functionally you ca ...</p>
+                                            </div>
+                                            <div class="chat-panel-user-item-content-right flex-shrink-0 text-end">
+                                                <div class="chat-panel-user-item-time">4:37 pm</div>
+                                                <div class="chat-panel-user-item-new-message-count">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-panel-main w-100">
+                    <div class="chat-panel-main-header d-flex justify-content-between align-items-center">
+                        <div class="chat-panel-main-header-profile d-flex align-items-center">
+                            <div class="back-to-users d-block d-md-none me-2 pe-1 cursor-pointer">
+                                <img src="assets/img/icons/arrow-left-icon-dark.svg" alt="Icon">
+                            </div>
+                            <div class="chat-panel-main-header-profile-thumb position-relative">
+                                <img src="assets/img/thumbs/user-img-3.png" alt="OW"><span
+                                    class="user-status active position-absolute bottom-0 end-0 rounded-circle"></span>
+                            </div>
+                            <div class="chat-panel-main-header-profile-text d-none d-md-block">
+                                <h6>Liam Martinez</h6>
+                                <p>Last seen: 15 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="chat-panel-main-header-action d-flex justify-content-end ">
+                            <button class="bg-transparent border-0 p-0"><img src="assets/img/icons/call-icon.svg"
+                                    alt="Icon"></button>
+                            <button class="bg-transparent border-0 p-0"><img src="assets/img/icons/video-call-icon.svg"
+                                    alt="Icon"></button>
+                            <button class="bg-transparent border-0 p-0"><img src="assets/img/icons/translate-icon.svg"
+                                    alt="Icon"></button>
+                        </div>
+                    </div>
+                    <div class="chat-panel-main-wrapper">
+                        <div class="chat-message d-flex align-items-center">
+                            <div class="chat-message-box">
+                                <p>Oh, hello! All perfectly. <br>
+                                    I will check it and get back to you soon</p>
+                                <div class="chat-message-box-time">Today, 04:45 PM</div>
+                            </div>
+                            <div class="chat-message-dropdown dropdown">
+                                <button class="dropdown-toggle bg-transparent border-0 p-0 d-flex align-items-center"
+                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="assets/img/icons/ellipsis-icon.svg" alt="Icon">
+                                </button>
+                                <ul class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#"> Create Task</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Todo</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Ticket</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chat-message message-sent d-flex align-items-center">
+                            <div class="chat-message-box">
+                                <p>Oh, hello! All perfectly. <br>
+                                    I will check it and get back to you soon</p>
+                                <div class="chat-message-box-time">Today, 04:45 PM</div>
+                            </div>
+                            <div class="chat-message-dropdown dropdown">
+                                <button class="dropdown-toggle bg-transparent border-0 p-0 d-flex align-items-center"
+                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="assets/img/icons/ellipsis-icon.svg" alt="Icon">
+                                </button>
+                                <ul class="dropdown-menu mt-1 dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#"> Create Task</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Todo</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Ticket</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chat-message d-flex align-items-center">
+                            <div class="chat-message-box">
+                                <p>Oh, hello! All perfectly. <br>
+                                    I will check it and get back to you soon</p>
+                                <div class="chat-message-box-time">Today, 04:45 PM</div>
+                            </div>
+                            <div class="chat-message-dropdown dropdown">
+                                <button class="dropdown-toggle bg-transparent border-0 p-0 d-flex align-items-center"
+                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="assets/img/icons/ellipsis-icon.svg" alt="Icon">
+                                </button>
+                                <ul class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#"> Create Task</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Todo</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Ticket</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chat-message message-sent d-flex align-items-center">
+                            <div class="chat-message-box">
+                                <p>Oh, hello! All perfectly. <br>
+                                    I will check it and get back to you soon</p>
+                                <div class="chat-message-box-time">Today, 04:45 PM</div>
+                            </div>
+                            <div class="chat-message-dropdown dropdown">
+                                <button class="dropdown-toggle bg-transparent border-0 p-0 d-flex align-items-center"
+                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="assets/img/icons/ellipsis-icon.svg" alt="Icon">
+                                </button>
+                                <ul class="dropdown-menu mt-1 dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#"> Create Task</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Todo</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Ticket</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chat-message d-flex align-items-center">
+                            <div class="chat-message-box">
+                                <div class="chat-message-audio"><img src="assets/img/icons/audio-frame.svg" alt="">
+                                </div>
+                                <div class="chat-message-box-time">Today, 04:45 PM</div>
+                            </div>
+                            <div class="chat-message-dropdown dropdown">
+                                <button class="dropdown-toggle bg-transparent border-0 p-0 d-flex align-items-center"
+                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="assets/img/icons/ellipsis-icon.svg" alt="Icon">
+                                </button>
+                                <ul class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#"> Create Task</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Todo</a></li>
+                                    <li><a class="dropdown-item" href="#"> Create Ticket</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-panel-main-form">
+                        <form action="#">
+                            <textarea name="Message" id="messageField" placeholder="Type something ..."></textarea>
+                            <div class="chat-panel-main-form-actions d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <button class="bg-transparent border-0 p-0">
+                                        <img src="assets/img/icons/mic-icon.svg" alt="">
+                                    </button>
+                                    <button class="bg-transparent border-0 p-0 position-relative">
+                                        <img src="assets/img/icons/document-attachment.svg" alt="">
+                                        <input type="file"
+                                            class="position-absolute cursor-pointer top-0 start-0 h-100 w-100 opacity-0"
+                                            id="uploadFile">
+                                    </button>
+                                    <button class="bg-transparent border-0 p-0">
+                                        <img src="assets/img/icons/emoji-icon.svg" alt="">
+                                    </button>
+                                </div>
+                                <button class="theme-btn m-0" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--------- Chat Area end --------->
+
+    </main>
+    <!--------- Main area end --------->
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
