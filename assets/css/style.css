@@ -395,8 +395,7 @@ a, a:hover {
 }
 
 .chat-panel-users .nav-tabs button:hover {
-    color: var(--theme-color);
-    border-color: transparent;
+    color: var(--theme-color); 
 }
 
 /*-------- Chat Panel Users Start --------*/
